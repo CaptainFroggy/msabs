@@ -1,0 +1,40 @@
+﻿I'm sorry, but an uncaught exception occurred.
+
+While running game code:
+  File "game/script.rpy", line 23, in script
+    play music /RebelsElegy.mp3
+  File "renpy/common/000statements.rpy", line 124, in execute_play_music
+    renpy.music.play(_audio_eval(p["file"]),
+  File "renpy/common/000statements.rpy", line 33, in _audio_eval
+    return eval(expr, locals=store.audio.__dict__)
+SyntaxError: invalid syntax (game/script.rpy, line 23)
+
+-- Full Traceback ------------------------------------------------------------
+
+Full traceback:
+  File "game/script.rpy", line 23, in script
+    play music /RebelsElegy.mp3
+  File "C:\Users\7hell\Downloads\renpy-8.3.4-sdk\renpy\ast.py", line 1980, in execute
+    self.call("execute")
+  File "C:\Users\7hell\Downloads\renpy-8.3.4-sdk\renpy\ast.py", line 1959, in call
+    return renpy.statements.call(method, parsed, *args, **kwargs)
+  File "C:\Users\7hell\Downloads\renpy-8.3.4-sdk\renpy\statements.py", line 374, in call
+    return method(parsed, *args, **kwargs)
+  File "renpy/common/000statements.rpy", line 124, in execute_play_music
+    renpy.music.play(_audio_eval(p["file"]),
+  File "renpy/common/000statements.rpy", line 33, in _audio_eval
+    return eval(expr, locals=store.audio.__dict__)
+  File "C:\Users\7hell\Downloads\renpy-8.3.4-sdk\renpy\python.py", line 1207, in py_eval
+    code = py_compile(code, 'eval')
+  File "C:\Users\7hell\Downloads\renpy-8.3.4-sdk\renpy\python.py", line 1144, in py_compile
+    raise e
+  File "C:\Users\7hell\Downloads\renpy-8.3.4-sdk\renpy\python.py", line 1081, in py_compile
+    raise orig_e
+  File "C:\Users\7hell\Downloads\renpy-8.3.4-sdk\renpy\python.py", line 1073, in py_compile
+    tree = compile(source, filename, py_mode, ast.PyCF_ONLY_AST | flags, 1)
+SyntaxError: invalid syntax (game/script.rpy, line 23)
+
+Windows-10-10.0.19045 AMD64
+Ren'Py 8.3.4.24120703
+Moonlight, Storm, and Blackened Sea 1.0
+Wed Dec 18 20:33:30 2024

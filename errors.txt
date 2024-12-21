@@ -1,0 +1,10 @@
+﻿I'm sorry, but errors were detected in your script. Please correct the
+errors listed below, and try again.
+
+
+File "game/script.rpy", line 21: expected 'image_name_component' not found.
+    show "/Deck_scaled_3x_pngcrushed"
+         ^
+
+Ren'Py Version: Ren'Py 8.3.4.24120703
+Wed Dec 18 20:37:55 2024
