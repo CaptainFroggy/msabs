@@ -1,40 +1,24 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/script.rpy", line 23, in script
-    play music /RebelsElegy.mp3
-  File "renpy/common/000statements.rpy", line 124, in execute_play_music
-    renpy.music.play(_audio_eval(p["file"]),
-  File "renpy/common/000statements.rpy", line 33, in _audio_eval
-    return eval(expr, locals=store.audio.__dict__)
-SyntaxError: invalid syntax (game/script.rpy, line 23)
+  File "game/script.rpy", line 31, in script
+    {cps=20}"""
+Exception: Sayer '{cps=20}' is not defined.
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/script.rpy", line 23, in script
-    play music /RebelsElegy.mp3
-  File "C:\Users\7hell\Downloads\renpy-8.3.4-sdk\renpy\ast.py", line 1980, in execute
-    self.call("execute")
-  File "C:\Users\7hell\Downloads\renpy-8.3.4-sdk\renpy\ast.py", line 1959, in call
-    return renpy.statements.call(method, parsed, *args, **kwargs)
-  File "C:\Users\7hell\Downloads\renpy-8.3.4-sdk\renpy\statements.py", line 374, in call
-    return method(parsed, *args, **kwargs)
-  File "renpy/common/000statements.rpy", line 124, in execute_play_music
-    renpy.music.play(_audio_eval(p["file"]),
-  File "renpy/common/000statements.rpy", line 33, in _audio_eval
-    return eval(expr, locals=store.audio.__dict__)
-  File "C:\Users\7hell\Downloads\renpy-8.3.4-sdk\renpy\python.py", line 1207, in py_eval
-    code = py_compile(code, 'eval')
-  File "C:\Users\7hell\Downloads\renpy-8.3.4-sdk\renpy\python.py", line 1144, in py_compile
-    raise e
-  File "C:\Users\7hell\Downloads\renpy-8.3.4-sdk\renpy\python.py", line 1081, in py_compile
-    raise orig_e
-  File "C:\Users\7hell\Downloads\renpy-8.3.4-sdk\renpy\python.py", line 1073, in py_compile
-    tree = compile(source, filename, py_mode, ast.PyCF_ONLY_AST | flags, 1)
-SyntaxError: invalid syntax (game/script.rpy, line 23)
+  File "game/script.rpy", line 31, in script
+    {cps=20}"""
+  File "d:\renpy-8.2.3-sdk\renpy\ast.py", line 2560, in execute
+    Say.execute(self)
+  File "d:\renpy-8.2.3-sdk\renpy\ast.py", line 575, in execute
+    who = eval_who(self.who, self.who_fast)
+  File "d:\renpy-8.2.3-sdk\renpy\ast.py", line 464, in eval_who
+    raise Exception("Sayer '%s' is not defined." % who)
+Exception: Sayer '{cps=20}' is not defined.
 
-Windows-10-10.0.19045 AMD64
-Ren'Py 8.3.4.24120703
+Windows-10-10.0.22621 AMD64
+Ren'Py 8.2.3.24061702
 Moonlight, Storm, and Blackened Sea 1.0
-Wed Dec 18 20:33:30 2024
+Mon Dec 23 14:21:52 2024
