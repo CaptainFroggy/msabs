@@ -1,12 +1,13 @@
-﻿# The script of the game goes in this file.
+# The script of the game goes in this file.
 
 # Declare characters used by this game. The color argument colorizes the
 # name of the character.
 
-define g = Character("Gillion")
-define c = Character("Chip")
-define j = Character("Jay")
+define g = Character("Gillion", window_background=Frame("images/textboxes/gillResize.png", 25, 25))
+define c = Character("Chip", window_background=Frame("images/textboxes/chipResize.png", 25, 25))
+define j = Character("Jay", window_background=Frame("images/textboxes/jayResize.png", 25, 25))
 define o = Character("Old Man Earl")
+
 # image deck = "/Deck_scaled_3x_pngcrushed"
 
 
