@@ -137,7 +137,7 @@ style window:
 
     background Image("gui/blankText.png", xalign=0.5, yalign=1.0)
 
-tyle windowJay is say_window:
+style windowJay is say_window:
     xalign 0.5
     xfill True
     yalign gui.textbox_yalign
