@@ -70,5 +70,29 @@ label start:
             "Turning around, you leave the water and your spiraling thoughts behind for the time being."
 
     # This ends the game.
+    jump juice
 
-    return
+    
+
+label juice:
+    show image "Kitchen_scaled_3x_pngcrushed.png"
+    play music "5 - Grand Strategy.mp3"
+
+    ```
+    Earl leads the way to the Albatross' kitchen. Trailing close behind, you find the kitchen in a turbulent condition. The Black Sea has tossed pots and pans onto counters and shattered glass on the floor; apparently, nobody has bothered to clear everything up since the last big wave.
+
+    Taking out a bowl, Earl places it onto an empty spot of counter. There's a pile of random "food" beside it.
+
+    ```
+
+    o ```I've got a stupid fuckin' kitchen to clean, so you'll have to pick out the ingredients yourself! 
+    
+    I grabbed a buncha shit from the fridge and put it there, grab whatcha want. Four ingredients max! Muddied juice tastes like ass.
+
+    Whatever you choose, just take it and squeeze it over the fuckin' bowl! I know you'd refuse to do it the old-fashioned way, fuckin' bitch.```
+
+    j "I mean, yeah, I don't want fucking diseases."
+
+    "You wash your hands quickly in the sink before glancing over at the ingredients pile. You make your first decision."
+
+return
