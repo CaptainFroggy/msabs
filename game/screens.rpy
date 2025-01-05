@@ -137,6 +137,30 @@ style window:
 
     background Image("gui/blankText.png", xalign=0.5, yalign=1.0)
 
+tyle windowJay is say_window:
+    xalign 0.5
+    xfill True
+    yalign gui.textbox_yalign
+    ysize gui.textbox_height
+
+    background Image("gui/jayResize.png", xalign=0.5, yalign=1.0)
+
+style windowChip is say_window:
+    xalign 0.5
+    xfill True
+    yalign gui.textbox_yalign
+    ysize gui.textbox_height
+
+    background Image("gui/chipResize.png", xalign=0.5, yalign=1.0)
+
+style windowGill is say_window:
+    xalign 0.5
+    xfill True
+    yalign gui.textbox_yalign
+    ysize gui.textbox_height
+
+    background Image("gui/gillResize.png", xalign=0.5, yalign=1.0)
+
 style namebox:
     xpos gui.name_xpos
     xanchor gui.name_xalign

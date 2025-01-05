@@ -3,11 +3,12 @@
 # Declare characters used by this game. The color argument colorizes the
 # name of the character.
 
-define g = Character("Gillion", window_background=Frame("images/textboxes/gillResize.png", 25, 25))
-define c = Character("Chip", window_background=Frame("images/textboxes/chipResize.png", 25, 25))
-define j = Character("Jay", window_background=Frame("images/textboxes/jayResize.png", 25, 25))
+define g = Character("Gillion", window_style="windowGill")
+define c = Character("Chip", window_style="windowChip")
+define j = Character("Jay", window_style="windowJay")
 define o = Character("Old Man Earl")
 
+define juiceScore = 0
 # image deck = "/Deck_scaled_3x_pngcrushed"
 
 
@@ -53,7 +54,7 @@ label start:
 
     menu:
         "Keep Watch":
-            j "Juice… why juice? Earl, I'm on watch, I can't - do you {i}want{/i} the ship to get attacked?"
+            j "Juice... why juice? Earl, I'm on watch, I can't - do you {i}want{/i} the ship to get attacked?"
 
             "Before you can even realize the mistake of objecting, Earl smacks you upside the head."
 
