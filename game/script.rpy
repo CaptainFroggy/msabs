@@ -9,13 +9,9 @@ define j = Character("Jay", window_style="windowJay")
 define o = Character("Old Man Earl")
 
 define juiceScore = 0 #keeps track of the juice
-# image deck = "/Deck_scaled_3x_pngcrushed"
-
 
 # The game starts here.
-
 label start:
-
     # Show a background. This uses a placeholder by default, but you can
     # add a file (named either "bg room.png" or "bg room.jpg") to the
     # images directory to show it.
@@ -72,8 +68,6 @@ label start:
     # This ends the game.
     jump kitchen
 
-    
-
 label kitchen:
     show image "Kitchen_scaled_3x_pngcrushed.png"
     play music "5 - Grand Strategy.mp3"
@@ -110,6 +104,8 @@ label kitchen:
             "Eggs go in juice, right? That sounds like a cooking thing. Does making juice count as cooking? You're cracking the egg open before you think it all the way through. However, it is the sadness that cracks your soul upon realizing your error that will remain with you forever."
 
             "The egg white, the yolk, and a few eggshell pieces look back at you from the bowl. You sincerely hope none of the crew contract salmonella."
+
+            $ juiceScore += 1
        
         "Secret meat":
             "How long has this been in the fridge? You vaguely remember Duke Duke D. Dukem, Duke of Duke giving it to you, the captains of the Riptide Pirates. That was before the Block. Before you held your bow up to Gillion's heart. Before you left your family behind."
@@ -191,6 +187,7 @@ label kitchen:
             "It's for the best, you tell yourself. You need the pep in your step today - but you can't even bear to look as you tear the packets open and let the crimson fly."
 
             $ juiceScore += 1
+            
 
         "Pocket Sand":
             "None of the remaining ingredients look good enough. You frown at your creation. Surely there's something else around here that will do. Sticking your hands into your pockets, you rummage around and pull out a handful of sand."
@@ -208,11 +205,117 @@ label kitchen:
 
     "With the old man gone, there's nothing to do but leave your possibly treacherous mistakes behind. You exit the kitchen back onto the main deck."
 
-    if juiceScore == 8:
-        "amazing juice good job"
-    elif: juiceScore >= 0:
-        "ok juice, it's fine"
-    else:
-        "terrible jiuce awful job"
+    jump deck
 
-return
+label deck:
+    show image "Deck_scaled_3x_pngcrushed.png"
+    play music "4 - Pirate's Legacy.mp3" 
+
+    ```
+    As you walk out, you notice that someone is lying on the deck, eyes to the sky. Their brown hair swathes their neck, and their long, red coat is unbuttoned. The bare chest that is revealed by this has a giant, black hole in it.
+
+    You wonder if it's painful being undead. No beating heart, no light in your eyes, and no breath from your lips. What is it like to be something that should not naturally exist?
+
+    You walk over to Chip and tower over him.
+
+    ```
+
+    j "What are you doing?"
+
+    "Chip sighs dramatically and hides his eyes in an elbow. He sniffs a couple times, even though he doesn't need the air. You almost believe he's upset."
+
+    c "Earl said there'd be juice an hour ago. If I were Gillion, I'd be having a duel with him right now. How come Earl gets off easy?"
+
+    "Rolling your eyes, you kick his side lightly. He whimpers pathetically and doesn't budge. Geez, when did he get so attached to juice? He probably can't even taste anything, now that he's dead and all."
+
+    j "Well, Earl's finishing it up now. Please don't kill Earl. He's old, and like, about to die anyways, if we don't get him out of here."
+
+    c "He's so, so old... I can't believe I died before he did."
+
+    "The playful atmosphere has evaporated. The tearfulness has faded from Chip's voice, replaced by the real tone he gets when he's sad; apathetic. He still hasn't removed his arm from his eyes, so you can't read his expression well - although, you know it's just another form of avoiding eye contact."
+
+    j "Yeah, well, Earl didn't go fight a giant spider lady, did he? Something was bound to happen to one of us at some point. We're not exactly the most careful."
+
+    c "...Yeah. And I'm the stupidest of us all."
+
+    "Of course, he's not wrong. But Chip calling himself stupid isn't a regular occurrence, and you don't like how the comment needles into your heart. It wasn't Chip's fault that Captain Widow stole his heart. It was just the Black Sea being difficult, as it loves to be."
+
+    j "You were unconscious, Chip. There was nothing you could've done. Gillion and I were the ones that let it happen. You can't blame yourself for something like that."
+
+    "There's silence from him. Finally, he removes the arm from his face and sits up, still refusing to look at you."
+
+    ```
+    It's not worth it to press Chip on the issue - not right now, at least. Not when there's already so much to worry about. The last thing you need is to start a fight right when you're about to delve into one of the most dangerous places you'll ever go.
+
+    Chip walks away towards the bow of the ship with his head down. You turn and head in the opposite direction. Your conversation with him doesn't sit right in your stomach, but you can't do anything about it now.
+
+    
+    ```
+    play music "5 - Grand Strategy"
+
+    if juiceScore == 8: 
+        jump goodJuice
+    elif juiceScore >= 1:
+        jump okJuice
+    else:
+        jump badJuice
+    
+label badJuice:
+    ```
+    You march about the ship and gather the rest of the crew. Earl likes to make a big party out of juice. Although this time, it's your juice, not his. You hope the others can't tell from how it tastes. What does Earl even put into his own juice regularly?
+
+    Once everyone is assembled on the main deck, Earl kicks open the kitchen door and rushes over to the crew. A large silver platter is balanced on his left hand, a glass for each person teetering dangerously about.
+
+    ```
+    o "Go on, drink up! You gonna let your juice go to waste? If you don't finish it, I'll throw the rest in your face!"
+
+    "Without needing to be told twice, the crew sip their juices politely. You watch everyone closely for their reactions."
+    
+    ```
+    Queen and Gryffon are leaning against the ship's railing, cups of purplish-black ichor in hand. Now that your crew is actually about to drink your juice, you feel a deep sense of unease settle in you. Maybe juice is not supposed to look like goo.
+
+    The pair drink from their glasses. Queen nods their head as they take a few sips, eyes burning a hole through the wooden planks in front of them. They hum in - well, not exactly pleasure. Maybe they're just humming because of their curse.
+
+    Gryffon chugs his entire cup down. It's only after the cup is empty that a horrified expression glistens in his eyes. His eyes flicker over to Earl and then to the sea over his shoulder. He opts for the middle-ground; squeezing his eyes shut and taking a shuddering breath.
+
+    Igneous gives his juice a puzzled look, but then shrugs and takes a normal swig. His face morphs through fifteen different phases of disgust before calming into acceptance. He sets his glass back down onto the crate behind him.
+
+    Meanwhile, Chip is giving his bubbling tankard a visibly upset look. When he catches you watching him, he gives you a weak smile and tearfully takes a tiny sip. He nearly chokes on it but manages to keep it down.
+```
+    c "Wow! That was… delicious, Earl. And not difficult at all to drink. Gill, what do you think?"
+
+    "Gillion doesn't respond. Standing next to Chip, his blue skin has paled into an off-white. His cup falls from his hand and clatters on the deck. The remaining liquid spills onto the deck, melting the boards like acid."
+
+    g "“Earl, what did we do to deserve this?"
+
+    "Everyone turns their attention to Earl, who is holding up the last glass to Drey. Drey laughs and starts walking away."
+
+    "Drey Ferin" "Ain't no way you're gettin' me to drink that, old man."
+
+    "Earl ignores everyone - except for you. You, he gives a challenging stare."
+
+    o "You gonna drink that or not? Fuckin' bitch"
+
+    ```
+    Oh no. He's got you exactly where he wants you. Was this his plan all along? Did he know you would fuck up the juice this badly? Was this whole endeavor meant to teach you some sort of lesson? Are you meant to appreciate his juice more now?
+
+    You stare at the cup in your hand. There will be consequences if you do not drink the juice, you know it. Besides, it can't be that bad - none of the others spat it out, at least. Hopefully, your stomach acid is stronger than the juice.
+
+    Praying to Aster that you won't regret it, you take a large swig. The taste is utterly indescribable, but decidedly the worst thing you've ever drank. It leaves a burning aftertaste in the back of your throat, and heartburn has already set it. 
+    
+    Your stomach roils in fear; it knows what's coming. A gag reflex makes you cough, but the juice refuses to leave your body.
+
+    ```
+    return
+
+
+
+label okJuice:
+    "they drank juice."
+
+
+label goodJuice:
+    "yay yippee good juice sparkle emoji"
+
+
+
