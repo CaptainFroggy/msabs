@@ -4,5 +4,7 @@
         "**/*.rpa": true,
         "**/*.rpymc": true,
         "**/cache/": true
-    }
+    },
+    "renpyWarp.sdkPath": "C:\\Users\\7hell\\Downloads\\renpy-8.3.4-sdk",
+    "renpyWarp.renpyExtensionsEnabled": "Enabled"
 }

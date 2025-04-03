@@ -1,31 +1,15 @@
-﻿# The script of the game goes in this file.
-
-# Declare characters used by this game. The color argument colorizes the
-# name of the character.
-
-define g = Character("Gillion", window_style="windowGill")
+﻿define g = Character("Gillion", window_style="windowGill")
 define c = Character("Chip", window_style="windowChip")
 define j = Character("Jay", window_style="windowJay")
 define o = Character("Old Man Earl")
 
 define juiceScore = 0 #keeps track of the juice
 
-# The game starts here.
 label start:
-    # Show a background. This uses a placeholder by default, but you can
-    # add a file (named either "bg room.png" or "bg room.jpg") to the
-    # images directory to show it.
-
+   
     show image "Deck_scaled_3x_pngcrushed.png"
     play music "3 - Rebel's Elegy.mp3" 
 
-    # This shows a character sprite. A placeholder is used, but you can
-    # replace it by adding a file named "eileen happy.png" to the images
-    # directory.
-
-    #show eileen happy
-
-    # These display lines of dialogue.
     """
     Today is the day! 
     
@@ -251,7 +235,7 @@ label deck:
 
     
     ```
-    play music "5 - Grand Strategy"
+    play music "5 - Grand Strategy.mp3"
 
     if juiceScore == 8: 
         jump goodJuice
@@ -261,6 +245,7 @@ label deck:
         jump badJuice
     
 label badJuice:
+    #play music "5 - Grand Strategy.mp3"
     ```
     You march about the ship and gather the rest of the crew. Earl likes to make a big party out of juice. Although this time, it's your juice, not his. You hope the others can't tell from how it tastes. What does Earl even put into his own juice regularly?
 
@@ -281,7 +266,8 @@ label badJuice:
     Igneous gives his juice a puzzled look, but then shrugs and takes a normal swig. His face morphs through fifteen different phases of disgust before calming into acceptance. He sets his glass back down onto the crate behind him.
 
     Meanwhile, Chip is giving his bubbling tankard a visibly upset look. When he catches you watching him, he gives you a weak smile and tearfully takes a tiny sip. He nearly chokes on it but manages to keep it down.
-```
+
+    ```
     c "Wow! That was… delicious, Earl. And not difficult at all to drink. Gill, what do you think?"
 
     "Gillion doesn't respond. Standing next to Chip, his blue skin has paled into an off-white. His cup falls from his hand and clatters on the deck. The remaining liquid spills onto the deck, melting the boards like acid."
@@ -306,16 +292,101 @@ label badJuice:
     Your stomach roils in fear; it knows what's coming. A gag reflex makes you cough, but the juice refuses to leave your body.
 
     ```
+    j "This is... {i}great{/i}, Earl. Thanks."
+
+    "A loud {i}thunk!{/i} draws the attention of the crew to Gryffon, who has face-planted onto the deck. He doesn't move, and a black substance is leaking out of his mouth."
+
+    "Queen drops to their knees and shakes Gryffon's body."
+
+    "Queen" "Gryffon, la! Are you alright, my dear friend, la?"
+
+    ```
+    Before they can make any progress in awakening him, though, Queen's expression goes blank. They collapse beside Gryffon in a similar condition.
+    
+    Gillion quickly rushes over to the crew members, hands lighting up with healing magic. He places his hands on the shoulders of Queen and Gryffon, but neither are revived. As the magic fades, Gillion looks over his shoulder at his fellow captains.
+    ```
+    g "...They're dead. Earl killed them with his sick juice."
+
+    ```
+    Dizziness overwhelms your head. A thousand questions flood before your eyes, too quick to latch onto long enough to say aloud. 
+    
+    How could you have possibly made a juice powerful enough to insta-kill them? Why did Earl let you make it? How is juice going to be the thing that kills you while you sail the Black Sea?
+    
+    You fall to your knees, and your skull hits the deck. Numbness prickles across your skin. Next time, you won't put pocket sand in your juice.
+    ```
+    #play music 13 – Power of Friendship.mp3
+    #uncomment once we have this track
+
+    show black
+    #change once we have special end screen
+    ```
+    Well done. You discovered the earliest way to die. Unfortunately, you murdered not only all three captains, but also three members of your crew. 
+    
+    What were you hoping to achieve with that abominable juice? Are you an assassin sent by the Navy?
+    
+    The only survivors of the tragic juice accident were Earl, Drey, and Finn. They attempted to dump your bodies overboard, but between a halfling, a human with unusable arms, and an old triton unable to stand for long, they gave up after twenty minutes.
+    
+    They abandoned the Albatross via teleporter and, once on Zero, told Ollie and Ensa the unfortunate news of your demise. 
+    
+    There was no time to grieve, however; they were going to need money fast, now that their bosses were dead. The trio of old men hitched a ride on a trading ship bound for Loffinlot and future prosperity.
+    
+    Earl set up a new juice tavern, regaining his fame and earning enough wealth to last him many lifetimes. 
+    
+    While Allport had drained him of his joy for juicing, returning to his hometown instead rejuvenated his passion. He was finally ready to settle down, this time with two lovers rather than just one.
+    
+    Finn was able to rest in Loffinlot uninterrupted. Without constantly being in mortal danger, his health improved immensely. There was always a smile on his face and a cup of juice in his hand. Twenty years later, he published the sequel to “Dark Puckered Hole.”
+    
+    Drey enjoyed life in Loffinlot with his new partners, but both those fateful nights in the Black Sea would haunt his step forever. 
+    
+    The raging storm and losing Arlin to the tide, and later the tragic accident of his niece and her crew's deaths. He would never know whether Arlin was alive or not, and it kept him up many a night.
+    
+    Across the world, the Albatross drifted across inky waves. The survivors of the Black Sea spoke of the ghost ship inhabited by three dead captains taken by the ichor. The Albatross sailed only at night, and the captains smote any who crossed their path.
+    
+    So, good job. Is this the ending you wanted? Surely not. There are still secrets to discover and lives to save. Try again - and next time, stick to the recipe.
+
+    ```
     return
 
-
-
 label okJuice:
-    "they drank juice."
+    ```
+    Most of the crew are silent as they drink. Your eyes scan them as paranoia begins brewing in your gut. What if they don't like it? What if they all blame you? What if they all die because you accidentally made poisonous juice?
+    
+    Instead of some extreme reaction, though, everyone seems to simply… drink. 
+    
+    Nobody makes a fuss - although, as the seconds tick by, you're slightly annoyed that not one of them has even said anything about the juice. Aren't they polite enough for a \"thanks for making juice for everybody!\"
 
+    You raise your glass to Earl. You will be the change you wish to see in the world.
+    ```
+    j "Thanks, Earl!"
+
+    "When you knock it back, however, you understand why everyone was so hesitant. The taste is slightly off, like someone made an unwise substitution. The aftertaste is tangy and sticks to your tongue. It's not horrible, but it sure leaves a lot to be desired."
+
+    jump chipPOV
 
 label goodJuice:
-    "yay yippee good juice sparkle emoji"
+    ```
+    Everyone hums in enjoyment as they drink their juice. You feel relief wash over you. For some unknown reason, you have a sense that you just dodged a hefty bullet.
+    
+    Chip takes a few massive gulps before slamming his tankard down on the barrel behind him. The specks of juice that remain fly from the force. He wipes the pink from his top lip.
 
+    ```
+    c "Amazing as usual, Earl. Got any more?"
 
+    o "Not for you! I'm savin' myself a few glasses. You keep your dirty hands off it, or I'll kill you, fuckin' bitch!"
 
+    c "Geez, okay, okay, I get it. I'll leave your juice alone."
+
+    "Gillion falls to his knees, and for a moment, you worry that he has a secret allergy. But instead of choking to death, he prostrates to Earl."
+
+    g "This juice... it is holy, Earl. Thank you for your services. I never need to consume liquid again, except through my absorbent pores."
+
+    o "...Whateva."
+
+    "You've gotta get in on this. Taking a sip, you're shocked by how absolutely delicious your creation is. The strawberries and bananas have blended together perfectly, and the milk and honey sweeten the mixture."
+    
+    "You have a hard time stopping yourself from unhinging your jaw and inhaling the rest, but you manage to cling onto your dignity."
+
+    jump chipPOV
+
+label chipPOV:
+return
