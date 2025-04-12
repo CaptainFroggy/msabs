@@ -1,6 +1,6 @@
-﻿define g = Character("Gillion", window_style="windowGill")
+﻿define g = Character("Gillion Tidestrider", window_style="windowGill")
 define c = Character("Chip", window_style="windowChip")
-define j = Character("Jay", window_style="windowJay")
+define j = Character("Jay Ferin", window_style="windowJay")
 define o = Character("Old Man Earl")
 
 define juiceScore = 0 #keeps track of the juice
@@ -45,7 +45,7 @@ label start:
         "Obey Earl":
             j "Huh, juice. Alright, yeah, just give me a second."
 
-            "Earl huffs and storms off, muttering something about how lazy young people are nowadays. You shake your head at the Black Sea, a small smile growing on your face. You hope you'll return to that annoying old man's complaints by the end of the night."
+            "Earl huffs and storms off, muttering something about how lazy young people are nowadays. You shake your head at the Black Sea, a small smile growing on your face. You hope you'll survive your venture into the Navy stronghold and return to that annoying old man's complaints."
 
             "Turning around, you leave the water and your spiraling thoughts behind for the time being."
 
@@ -59,7 +59,7 @@ label kitchen:
 
 
     ```
-    Earl leads the way to the Albatross' kitchen. Trailing close behind, you find the kitchen in a turbulent condition. The Black Sea has tossed pots and pans onto counters and shattered glass on the floor; apparently, nobody has bothered to clear everything up since the last big wave.
+    Earl leads the way to the Albatross' kitchen. Trailing close behind, you find the kitchen in a turbulent condition. The Black Sea has tossed pots and pans onto counters and shattered glass on the floor; nobody has bothered to clear everything up since the last big wave.
 
     Taking out a bowl, Earl places it onto an empty spot of counter. There's a pile of random "food" beside it.
 
@@ -77,19 +77,19 @@ label kitchen:
 
 
     menu:
-        "Strawberries":
-            "Strawberries! Those are edible, and more importantly, a recognizable juice flavor. You grab a plate of strawberries and squeeze the juice out of all of them, one by one, into the bowl."
-            
-            "…Okay, maybe you don't squeeze all of them. Strawberries are just too damn delicious. Maybe you munch on one while Earl isn't looking. Or a few. Or several."
-
-            $ juiceScore += 2
-    
         "Gilly Egg":
             "Eggs go in juice, right? That sounds like a cooking thing. Does making juice count as cooking? You're cracking the egg open before you think it all the way through. However, it is the sadness that cracks your soul upon realizing your error that will remain with you forever."
 
             "The egg white, the yolk, and a few eggshell pieces look back at you from the bowl. You sincerely hope none of the crew contract salmonella."
 
             $ juiceScore += 1
+            
+        "Strawberries":
+            "Strawberries! Those are edible, and more importantly, a recognizable juice flavor. You grab a plate of strawberries and squeeze the juice out of all of them, one by one, into the bowl."
+            
+            "...Okay, maybe you don't squeeze all of them. Strawberries are just too damn delicious. Maybe you munch on one while Earl isn't looking. Or a few. Or several."
+
+            $ juiceScore += 2
        
         "Secret meat":
             "How long has this been in the fridge? You vaguely remember Duke Duke D. Dukem, Duke of Duke giving it to you, the captains of the Riptide Pirates. That was before the Block. Before you held your bow up to Gillion's heart. Before you left your family behind."
@@ -100,6 +100,21 @@ label kitchen:
     "There are so many more choices to make. You hunt for your next victim in the ingredient stack."
         
     menu:
+        
+        "Strange Slime":
+            "Sitting directly on the counter, without a plate, is about a cup's worth of purple slime. The color is actually somewhat familiar, but you can't exactly place why..."
+            
+            j "Earl, where'd you get this?"
+            
+            o "I told you it was in the fridge, you idiot! Dontcha ever listen to me?"
+            
+        "Coconut":
+            "There is something vile and horrible residing in your soul today. Picking up a lone coconut, you cut it open with a knife and begin shaving coconut flakes into the juice. Every flake is accompanied by a piece of your heart."
+
+            "Your crew will mutiny after this, you are sure. But the looks on their faces when they take their first sip of the juice... it will be worth it."
+
+            $ juiceScore += 1
+
         "Bananas":
             "It's time to answer one of the big questions: can you juice a banana? With a strength stat of eight, the answer is no. You stare at the mashed bananas pasted onto your hands and soaking in the bowl. How could it have disappointed you so?"
 
@@ -107,20 +122,7 @@ label kitchen:
 
             $ juiceScore += 2
 
-            
-        "Coconut":
-            "There is something vile and horrible residing in your soul today. Picking up a lone coconut, you cut it open with a knife and begin shaving coconut flakes into the juice. Every flake is accompanied by a piece of your heart."
-
-            "Your crew will mutiny after this, you are sure. But the looks on their faces when they take their first sip of the juice… it will be worth it."
-
-            $ juiceScore += 1
-
-        "Strange Slime":
-            "Sitting directly on the counter, without a plate, is about a cup's worth of purple slime. The color is actually somewhat familiar, but you can't exactly place why…"
-            
-            j "Earl, where'd you get this?"
-            
-            o "I told you it was in the fridge, you idiot! Dontcha ever listen to me?"
+        
             
             "Well, it's at least semi-liquid, which is more than you can say about some of your other options. You drop it into the bowl without a second thought and instantaneously repress the memory of the little scream that the slime makes as it hits the juice."
 
@@ -161,10 +163,15 @@ label kitchen:
         
             "You can't let this defeat you. Not a simple honey jar, not this time. You grip the lid tightly and grit your teeth. Limbs twisting and turning this and that way, tears well in your eyes as you summon every ounce of might your body contains."
     
-            "Finally, a simple pop! sounds, and you are free to empty the revealed treasure into the bowl. You wipe the sweat from your brow. This is a trifling victory… but a victory nonetheless."
+            "Finally, a simple {i}pop!{/i} sounds, and you are free to empty the revealed treasure into the bowl. You wipe the sweat from your brow. This is a trifling victory... but a victory nonetheless."
 
             $ juiceScore += 2
-  
+
+        "Pocket Sand":
+            "None of the remaining ingredients look good enough. You frown at your creation. Surely there's something else around here that will do. Sticking your hands into your pockets, you rummage around and pull out a handful of sand."
+          
+            "You shrug and sprinkle it into the bowl. Nobody will even notice. A soft crunch is good for you. Besides, you're certain that half the crew has already eaten sand before."
+          
         "Hot Sauce":
             "You hold three packets of hot sauce in your hands. Do you dare use them? Do you risk the wrath of your crew, your family? Could you yourself even tolerate the amalgamation it will create?"
     
@@ -173,11 +180,7 @@ label kitchen:
             $ juiceScore += 1
             
 
-        "Pocket Sand":
-            "None of the remaining ingredients look good enough. You frown at your creation. Surely there's something else around here that will do. Sticking your hands into your pockets, you rummage around and pull out a handful of sand."
-          
-            "You shrug and sprinkle it into the bowl. Nobody will even notice. A soft crunch is good for you. Besides, you're certain that half the crew has already eaten sand before."
-          
+        
     "As you mix your mysterious brew together, Earl shuffles over. He's managed to clean the entire kitchen while you made the juice. It's probably cleaner than it was before the Albatross sailed into the Black Sea."
 
 
@@ -216,7 +219,7 @@ label deck:
 
     c "He's so, so old... I can't believe I died before he did."
 
-    "The playful atmosphere has evaporated. The tearfulness has faded from Chip's voice, replaced by the real tone he gets when he's sad; apathetic. He still hasn't removed his arm from his eyes, so you can't read his expression well - although, you know it's just another form of avoiding eye contact."
+    "The playful atmosphere has evaporated. The tearfulness has faded from Chip's voice, replaced by the real tone he gets when he's sad: apathetic. He still hasn't removed the arm from his eyes, so you can't read his expression well. You know it's just another method of avoiding eye contact."
 
     j "Yeah, well, Earl didn't go fight a giant spider lady, did he? Something was bound to happen to one of us at some point. We're not exactly the most careful."
 
@@ -233,8 +236,16 @@ label deck:
 
     Chip walks away towards the bow of the ship with his head down. You turn and head in the opposite direction. Your conversation with him doesn't sit right in your stomach, but you can't do anything about it now.
 
-    
+    You march about the ship and gather the rest of the crew. Earl likes to make a big party out of juice. Although this time, it's your juice, not his. You hope the others can't tell from how it tastes. What does Earl even put into his own juice regularly?
+
+    Once everyone is assembled on the main deck, Earl kicks open the kitchen door and rushes over to the crew. A large silver platter is balanced on his left hand, a glass for each person teetering dangerously about.
+
     ```
+    o "Go on, drink up! You gonna let your juice go to waste? If you don't finish it, I'll throw the rest in your face!"
+
+    "Without needing to be told twice, the crew sip their juices politely. You watch everyone closely for their reactions."
+    
+    
     play music "5 - Grand Strategy.mp3"
 
     if juiceScore == 8: 
@@ -246,16 +257,7 @@ label deck:
     
 label badJuice:
     #play music "5 - Grand Strategy.mp3"
-    ```
-    You march about the ship and gather the rest of the crew. Earl likes to make a big party out of juice. Although this time, it's your juice, not his. You hope the others can't tell from how it tastes. What does Earl even put into his own juice regularly?
-
-    Once everyone is assembled on the main deck, Earl kicks open the kitchen door and rushes over to the crew. A large silver platter is balanced on his left hand, a glass for each person teetering dangerously about.
-
-    ```
-    o "Go on, drink up! You gonna let your juice go to waste? If you don't finish it, I'll throw the rest in your face!"
-
-    "Without needing to be told twice, the crew sip their juices politely. You watch everyone closely for their reactions."
-    
+   
     ```
     Queen and Gryffon are leaning against the ship's railing, cups of purplish-black ichor in hand. Now that your crew is actually about to drink your juice, you feel a deep sense of unease settle in you. Maybe juice is not supposed to look like goo.
 
@@ -268,7 +270,7 @@ label badJuice:
     Meanwhile, Chip is giving his bubbling tankard a visibly upset look. When he catches you watching him, he gives you a weak smile and tearfully takes a tiny sip. He nearly chokes on it but manages to keep it down.
 
     ```
-    c "Wow! That was… delicious, Earl. And not difficult at all to drink. Gill, what do you think?"
+    c "Wow! That was... delicious, Earl. And not difficult at all to drink. Gill, what do you think?"
 
     "Gillion doesn't respond. Standing next to Chip, his blue skin has paled into an off-white. His cup falls from his hand and clatters on the deck. The remaining liquid spills onto the deck, melting the boards like acid."
 
@@ -280,7 +282,7 @@ label badJuice:
 
     "Earl ignores everyone - except for you. You, he gives a challenging stare."
 
-    o "You gonna drink that or not? Fuckin' bitch"
+    o "You gonna drink that or not? Fuckin' bitch."
 
     ```
     Oh no. He's got you exactly where he wants you. Was this his plan all along? Did he know you would fuck up the juice this badly? Was this whole endeavor meant to teach you some sort of lesson? Are you meant to appreciate his juice more now?
@@ -334,13 +336,13 @@ label badJuice:
     
     While Allport had drained him of his joy for juicing, returning to his hometown instead rejuvenated his passion. He was finally ready to settle down, this time with two lovers rather than just one.
     
-    Finn was able to rest in Loffinlot uninterrupted. Without constantly being in mortal danger, his health improved immensely. There was always a smile on his face and a cup of juice in his hand. Twenty years later, he published the sequel to “Dark Puckered Hole.”
+    Finn was able to rest in Loffinlot uninterrupted. Without constantly being in mortal danger, his health improved immensely. There was always a smile on his face and a cup of juice in his hand. Twenty years later, he published the sequel to \"Dark Puckered Hole.\"
     
     Drey enjoyed life in Loffinlot with his new partners, but both those fateful nights in the Black Sea would haunt his step forever. 
     
     The raging storm and losing Arlin to the tide, and later the tragic accident of his niece and her crew's deaths. He would never know whether Arlin was alive or not, and it kept him up many a night.
     
-    Across the world, the Albatross drifted across inky waves. The survivors of the Black Sea spoke of the ghost ship inhabited by three dead captains taken by the ichor. The Albatross sailed only at night, and the captains smote any who crossed their path.
+    The Albatross drifted across inky waves eternally. The survivors of the Black Sea spoke of the ghost ship inhabited by three dead captains taken by the ichor. The Albatross sailed only at night, and the captains smote any who crossed their path.
     
     So, good job. Is this the ending you wanted? Surely not. There are still secrets to discover and lives to save. Try again - and next time, stick to the recipe.
 
@@ -351,7 +353,7 @@ label okJuice:
     ```
     Most of the crew are silent as they drink. Your eyes scan them as paranoia begins brewing in your gut. What if they don't like it? What if they all blame you? What if they all die because you accidentally made poisonous juice?
     
-    Instead of some extreme reaction, though, everyone seems to simply… drink. 
+    Instead of some extreme reaction, though, everyone seems to simply... drink. 
     
     Nobody makes a fuss - although, as the seconds tick by, you're slightly annoyed that not one of them has even said anything about the juice. Aren't they polite enough for a \"thanks for making juice for everybody!\"
 
@@ -362,6 +364,7 @@ label okJuice:
     "When you knock it back, however, you understand why everyone was so hesitant. The taste is slightly off, like someone made an unwise substitution. The aftertaste is tangy and sticks to your tongue. It's not horrible, but it sure leaves a lot to be desired."
 
     jump chipPOV
+
 
 label goodJuice:
     ```
