@@ -108,7 +108,7 @@ define gui.textbox_yalign = 1.0
 ## The placement of the speaking character's name, relative to the textbox.
 ## These can be a whole number of pixels from the left or top, or 0.5 to center.
 define gui.name_xpos = 360
-define gui.name_ypos = 0
+define gui.name_ypos = -5
 
 ## The horizontal alignment of the character's name. This can be 0.0 for left-
 ## aligned, 0.5 for centered, and 1.0 for right-aligned.
@@ -121,11 +121,11 @@ define gui.namebox_height = None
 
 ## The borders of the box containing the character's name, in left, top, right,
 ## bottom order.
-define gui.namebox_borders = Borders(20, 20, 20, 5)
+define gui.namebox_borders = Borders(20, 20, 16, 5)
 
 ## If True, the background of the namebox will be tiled, if False, the
 ## background of the namebox will be scaled.
-define gui.namebox_tile = False
+define gui.namebox_tile = True
 
 
 ## The placement of dialogue relative to the textbox. These can be a whole
@@ -204,7 +204,6 @@ define gui.quick_button_text_selected_color = gui.accent_color
 ## Choice Buttons ##############################################################
 ##
 ## Choice buttons are used in the in-game menus.
-
 define gui.choice_button_width = 1185
 define gui.choice_button_height = None
 define gui.choice_button_tile = False
@@ -212,9 +211,9 @@ define gui.choice_button_borders = Borders(150, 8, 150, 8)
 define gui.choice_button_text_font = gui.text_font
 define gui.choice_button_text_size = gui.text_size
 define gui.choice_button_text_xalign = 0.5
-define gui.choice_button_text_idle_color = '#ffffff'
-define gui.choice_button_text_hover_color = '#dad1e0'
-define gui.choice_button_text_insensitive_color = '#8888887f'
+define gui.choice_button_text_idle = "game/gui/choiceBox1.png"
+define gui.choice_button_text_hover = "game/gui/choiceBox1.png"
+define gui.choice_button_text_insensitive = "game/gui/choiceBox1.png"
 
 
 ## File Slot Buttons ###########################################################
