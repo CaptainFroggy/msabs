@@ -2,12 +2,14 @@
 define c = Character("Chip", window_style="windowChip")
 define j = Character("Jay Ferin", window_style="windowJay")
 define o = Character("Old Man Earl")
+image d = "game/images/Deck.png"
+image k = "game/images/Kitchen.png"
 
 define juiceScore = 0 #keeps track of the juice
 
 label start:
    
-    show image "Deck_scaled_3x_pngcrushed.png"
+    show d
     play music "3 - Rebel's Elegy.mp3" 
 
     """
@@ -53,11 +55,9 @@ label start:
     jump kitchen
 
 label kitchen:
-    show image "Kitchen_scaled_3x_pngcrushed.png"
+    show k
     play music "5 - Grand Strategy.mp3"
     
-
-
     ```
     Earl leads the way to the Albatross' kitchen. Trailing close behind, you find the kitchen in a turbulent condition. The Black Sea has tossed pots and pans onto counters and shattered glass on the floor; nobody has bothered to clear everything up since the last big wave.
 
@@ -191,11 +191,13 @@ label kitchen:
     o "I'll finish this myself! Go tell the others this'll be out in a few! Fuckin' bitch."
 
     "With the old man gone, there's nothing to do but leave your possibly treacherous mistakes behind. You exit the kitchen back onto the main deck."
-
+    
+    hide k
+    play music "game/audio/5 - Grand Strategy.mp3" 
     jump deck
 
 label deck:
-    show image "Deck_scaled_3x_pngcrushed.png"
+    show d #this isn't working??
     play music "4 - Pirate's Legacy.mp3" 
 
     ```
@@ -256,7 +258,9 @@ label deck:
         jump badJuice
     
 label badJuice:
-    #play music "5 - Grand Strategy.mp3"
+
+    show d
+    play music "game/audio/5 - Grand Strategy.mp3" 
    
     ```
     Queen and Gryffon are leaning against the ship's railing, cups of purplish-black ichor in hand. Now that your crew is actually about to drink your juice, you feel a deep sense of unease settle in you. Maybe juice is not supposed to look like goo.
@@ -316,7 +320,7 @@ label badJuice:
     
     You fall to your knees, and your skull hits the deck. Numbness prickles across your skin. Next time, you won't put pocket sand in your juice.
     ```
-    #play music 13 – Power of Friendship.mp3
+    #play music 13 - Power of Friendship.mp3
     #uncomment once we have this track
 
     show black
@@ -350,6 +354,9 @@ label badJuice:
     return
 
 label okJuice:
+    show d
+    play music "game/audio/5 - Grand Strategy.mp3"  
+    
     ```
     Most of the crew are silent as they drink. Your eyes scan them as paranoia begins brewing in your gut. What if they don't like it? What if they all blame you? What if they all die because you accidentally made poisonous juice?
     
@@ -365,8 +372,10 @@ label okJuice:
 
     jump chipPOV
 
-
 label goodJuice:
+    show d
+    play music "game/audio/5 - Grand Strategy.mp3" 
+    
     ```
     Everyone hums in enjoyment as they drink their juice. You feel relief wash over you. For some unknown reason, you have a sense that you just dodged a hefty bullet.
     
@@ -389,7 +398,123 @@ label goodJuice:
     
     "You have a hard time stopping yourself from unhinging your jaw and inhaling the rest, but you manage to cling onto your dignity."
 
+    jump afterJuice
+
+label afterJuice:
+    show d
+
+    ```
+    Everyone begins to disperse, leaving you and your two fellow captains on the main deck. 
+    
+    You sidle up to the ship's wooden railing. The rosewood splinters poking your fingertips serve as a reminder that you remain safe for now as you look out towards your destination.
+
+    No, there's nothing there, not at the moment. But you should be arriving soon, and nerves are vibrating under your skin.
+    
+    Gillion throws his legs over the railing and sits down on it, also looking ahead.
+
+    ```
+    g "Do you have any idea what we'll find in there, Jay?"
+
+    j "No, not really. But it's a secret Navy stronghold, so I assume nothing too good. Who knows what they've left guarding the place."
+
+    "Chip looks out into the ocean, bushy hair hiding his face."
+
+    c "Whatever it is, we'll deal with it. We always do. We'll get in there, find that information Jay wants, and get out lickety-split. Besides, it can't be much worse than what we've already run into."
+
+    "You slap Chip upside the head. He really is the biggest idiot in Mana."
+
+    j "Great, now we're all going to die. Thanks, Chip."
+
+    c "Hey, I'm just tryin' to liven your spirits! You've been moping all day."
+
+    j "I've been moping? You were the one who was lying on the deck feeling sorry for yourself!"
+
+    c "Yeah, well, you've also been a jerk!"
+
+    g "Guys, stop, please."
+
+    "You and Chip glare at each other. You, a jerk? Is he delusional? You've been nothing but nice to him all day. 
+    
+    Being totally confident in anything is just asking to be proven wrong, and you're just making sure Chip doesn't curse you all with a painful demise."
+
+    g "I think our chances of survival are a lot higher if we don't start fighting before we even get to the stronghold. I'm sure it's not that hard to be nice to each other."
+
+    "He's right, unfortunately. You sigh and roll your eyes, gazing back out into the ocean. Chip, too, turns away. You'll figure out whatever is wrong with Chip later."
+
+    j "We should be there soon. Be ready for trouble."
+
     jump chipPOV
 
 label chipPOV:
+    show black #change to loading screen later
+    show d
+    play music "4 - Pirate's Legacy.mp3"
+
+    ```
+    The minutes tick by, then hours. Night falls upon the Black Sea and air sits heavily in your lungs. 
+    
+    You breathe not for need of oxygen, but out of habit. It's a laborious effort, but it helps you clutch onto the last strands of your humanity.
+    
+    Nighttime doesn't feel right here. While monsters have always haunted sleeping people from their closets and under their beds, the bristling on the back of your neck isn't natural. 
+    
+    Someone - or something - is watching your every move. Are they benevolent, cruel, or a neutral party? Are you falling into their trap?
+    
+    From across the main deck, Jay is putting her magical spyglass to her eye and peering out into the void. 
+    
+    It's impossible to see beyond the glowing lanterns of the ship. Everything is black, like the ichor that you spit out when nobody is watching.
+
+    ```
+    j  "Let's... pull up the rows for the night and stay here. Something's weird."
+
+    "You don't like the confused, wary look that's growing on your fellow captain's face."
+
+    c "Well, which direction is it?"
+
+    g "Yeah - are we there yet?"
+
+    "Jay sticks the spyglass back into the pouch attached to her waist and crosses her arms. In a picture where her hair should be blowing in the breeze, it appears weighed down by the world."
+
+    j "We're basically on top of it right now."
+
+    "Gillion casually leans slightly sideways, eyes wandering to the lapping waters below."
+
+    g "Well, it didn't {i}sink,{/i} did it?"
+
+    "That would make sense. You've been to a lot of crazy places during your travels, including underwater." 
+    
+    "It wouldn't surprise you if the Navy forced their soldiers to learn how to breathe underwater just for a guard posting."
+
+    c "Oh, that might be how it works."
+
+    j "I don't know. I mean, how would a stronghold sink?"
+
+    g "I mean, it's called R.A.F.T., it would be pretty embarrassing."
+    
+    g "...Do you want me to check, or is that fucking crazy?"
+
+    j "No, not in the ocean, no."
+
+    "You think back to when Gillion pulled Jay and Earl from the ocean." 
+    
+    "Earl had coughed up mountains of filthy water afterwards and Jay was utterly unconscious, but Gillion had only seemed strangely shaken. You distinctly remember the water congealing into puddles of wobbly slime, left in trails around the ship from Gillion's bare feet."
+
+    j "It definitely didn't sink."
+
+    g "Uhhhh, ROCK TEST!"
+
+    "Gillion snatches a stray pebble from the deck and in a blue blur, his arm winds back and shoots the pebble off into the distance in front of the ship."
+
+    "You have a different idea, however. You can't see your stalker anywhere around you, as the darkness is cloaking them - but what if they're observing from above? Craning your head back, you narrow your eyes to cut through the black."
+
+    "Before you can get a good look, however, a piercing caw! echoes across the water. Your eyes snap to a massive abomination that swoops over the ship." 
+    
+    "It has wings of thin bones that drip black ichor onto the deck as it passes over, and a human face with eyes sewn shut and no jaw."
+
+    "Your hands jump to the swords at your sides, but your instinct isn't needed. Bright purple magic zaps the beast from the sky." 
+    
+    "The creature disintegrates into dust that floats down into your eyes. However, the particles don't stop you from seeing the sky and space around the ship ripple as the purple magic evaporates."
+
+    "Adrenaline begins to seep into your system. Empty air isn't supposed to do that."
+
+    c "We're in a test tube!"
 return
