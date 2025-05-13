@@ -7,7 +7,7 @@ define juiceScore = 0 #keeps track of the juice
 
 label start:
    
-    scene deck #commit test
+    scene deck
     play music "3_rebels_elegy.mp3"
 
     """
@@ -105,6 +105,8 @@ label kitchen:
             
             o "I told you it was in the fridge, you idiot! Dontcha ever listen to me?"
             
+            "Well, it's at least semi-liquid, which is more than you can say about some of your other options. You drop it into the bowl without a second thought and instantaneously repress the memory of the little scream that the slime makes as it hits the juice."
+
         "Coconut":
             "There is something vile and horrible residing in your soul today. Picking up a lone coconut, you cut it open with a knife and begin shaving coconut flakes into the juice. Every flake is accompanied by a piece of your heart."
 
@@ -119,11 +121,6 @@ label kitchen:
 
             $ juiceScore += 2
 
-        
-            
-            "Well, it's at least semi-liquid, which is more than you can say about some of your other options. You drop it into the bowl without a second thought and instantaneously repress the memory of the little scream that the slime makes as it hits the juice."
-
-   
     "What next, master chef?"
     
     menu:
@@ -336,7 +333,7 @@ label badJuice:
     
     Finn was able to rest in Loffinlot uninterrupted. Without constantly being in mortal danger, his health improved immensely. There was always a smile on his face and a cup of juice in his hand. Twenty years later, he published the sequel to \"Dark Puckered Hole.\"
     
-    Drey enjoyed life in Loffinlot with his new partners, but both those fateful nights in the Black Sea would haunt his step forever. 
+    Drey enjoyed life in Loffinlot with his new partners, but both those fateful nights in the Black Sea would haunt his steps forever. 
     
     The raging storm and losing Arlin to the tide, and later the tragic accident of his niece and her crew's deaths. He would never know whether Arlin was alive or not, and it kept him up many a night.
     
@@ -497,7 +494,7 @@ label chipPOV:
 
     "You have a different idea, however. You can't see your stalker anywhere around you, as the darkness is cloaking them - but what if they're observing from above? Craning your head back, you narrow your eyes to cut through the black."
 
-    "Before you can get a good look, however, a piercing caw! echoes across the water. Your eyes snap to a massive abomination that swoops over the ship." 
+    "Before you can get a good look, however, a piercing {i}caw!{/i} echoes across the water. Your eyes snap to a massive abomination that swoops over the ship." 
     
     "It has wings of thin bones that drip black ichor onto the deck as it passes over, and a human face with eyes sewn shut and no jaw."
 
