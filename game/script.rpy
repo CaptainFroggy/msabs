@@ -1,4 +1,4 @@
-define g = Character("Gillion Tidestrider", window_style="windowGill")
+﻿define g = Character("Gillion Tidestrider", window_style="windowGill")
 define c = Character("Chip", window_style="windowChip")
 define j = Character("Jay Ferin", window_style="windowJay")
 define o = Character("Old Man Earl")
@@ -7,7 +7,7 @@ define juiceScore = 0 #keeps track of the juice
 
 label start:
    
-    scene deck
+    scene deck #commit test
     play music "3_rebels_elegy.mp3"
 
     """
