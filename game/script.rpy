@@ -1,16 +1,14 @@
-﻿define g = Character("Gillion Tidestrider", window_style="windowGill")
+define g = Character("Gillion Tidestrider", window_style="windowGill")
 define c = Character("Chip", window_style="windowChip")
 define j = Character("Jay Ferin", window_style="windowJay")
 define o = Character("Old Man Earl")
-image d = "game/images/Deck.png"
-image k = "game/images/Kitchen.png"
 
 define juiceScore = 0 #keeps track of the juice
 
 label start:
    
-    show d
-    play music "3 - Rebel's Elegy.mp3" 
+    scene deck
+    play music "3_rebels_elegy.mp3"
 
     """
     Today is the day! 
@@ -51,12 +49,11 @@ label start:
 
             "Turning around, you leave the water and your spiraling thoughts behind for the time being."
 
-    # This ends the game.
     jump kitchen
 
 label kitchen:
-    show k
-    play music "5 - Grand Strategy.mp3"
+    scene kitchen
+    play music "5_grand_strategy.mp3"
     
     ```
     Earl leads the way to the Albatross' kitchen. Trailing close behind, you find the kitchen in a turbulent condition. The Black Sea has tossed pots and pans onto counters and shattered glass on the floor; nobody has bothered to clear everything up since the last big wave.
@@ -192,13 +189,11 @@ label kitchen:
 
     "With the old man gone, there's nothing to do but leave your possibly treacherous mistakes behind. You exit the kitchen back onto the main deck."
     
-    hide k
-    play music "game/audio/5 - Grand Strategy.mp3" 
     jump deck
 
 label deck:
-    show d #this isn't working??
-    play music "4 - Pirate's Legacy.mp3" 
+    scene deck
+    play music "4_pirates_legacy.mp3" 
 
     ```
     As you walk out, you notice that someone is lying on the deck, eyes to the sky. Their brown hair swathes their neck, and their long, red coat is unbuttoned. The bare chest that is revealed by this has a giant, black hole in it.
@@ -248,7 +243,7 @@ label deck:
     "Without needing to be told twice, the crew sip their juices politely. You watch everyone closely for their reactions."
     
     
-    play music "5 - Grand Strategy.mp3"
+    #play music "5_grand_strategy.mp3"
 
     if juiceScore == 8: 
         jump goodJuice
@@ -259,8 +254,7 @@ label deck:
     
 label badJuice:
 
-    show d
-    play music "game/audio/5 - Grand Strategy.mp3" 
+    play music "5_grand_strategy.mp3"
    
     ```
     Queen and Gryffon are leaning against the ship's railing, cups of purplish-black ichor in hand. Now that your crew is actually about to drink your juice, you feel a deep sense of unease settle in you. Maybe juice is not supposed to look like goo.
@@ -323,7 +317,7 @@ label badJuice:
     #play music 13 - Power of Friendship.mp3
     #uncomment once we have this track
 
-    show black
+    scene black
     #change once we have special end screen
     ```
     Well done. You discovered the earliest way to die. Unfortunately, you murdered not only all three captains, but also three members of your crew. 
@@ -354,8 +348,7 @@ label badJuice:
     return
 
 label okJuice:
-    show d
-    play music "game/audio/5 - Grand Strategy.mp3"  
+    play music "5_grand_strategy.mp3"  
     
     ```
     Most of the crew are silent as they drink. Your eyes scan them as paranoia begins brewing in your gut. What if they don't like it? What if they all blame you? What if they all die because you accidentally made poisonous juice?
@@ -373,8 +366,7 @@ label okJuice:
     jump chipPOV
 
 label goodJuice:
-    show d
-    play music "game/audio/5 - Grand Strategy.mp3" 
+    play music "5_grand_strategy.mp3" 
     
     ```
     Everyone hums in enjoyment as they drink their juice. You feel relief wash over you. For some unknown reason, you have a sense that you just dodged a hefty bullet.
@@ -401,7 +393,6 @@ label goodJuice:
     jump afterJuice
 
 label afterJuice:
-    show d
 
     ```
     Everyone begins to disperse, leaving you and your two fellow captains on the main deck. 
@@ -446,9 +437,9 @@ label afterJuice:
     jump chipPOV
 
 label chipPOV:
-    show black #change to loading screen later
-    show d
-    play music "4 - Pirate's Legacy.mp3"
+    scene black #change to loading screen later
+    scene deck
+    play music "4_pirates_legacy.mp3"
 
     ```
     The minutes tick by, then hours. Night falls upon the Black Sea and air sits heavily in your lungs. 
