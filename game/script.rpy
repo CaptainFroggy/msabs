@@ -105,8 +105,6 @@ label kitchen:
             
             o "I told you it was in the fridge, you idiot! Dontcha ever listen to me?"
             
-            "Well, it's at least semi-liquid, which is more than you can say about some of your other options. You drop it into the bowl without a second thought and instantaneously repress the memory of the little scream that the slime makes as it hits the juice."
-
         "Coconut":
             "There is something vile and horrible residing in your soul today. Picking up a lone coconut, you cut it open with a knife and begin shaving coconut flakes into the juice. Every flake is accompanied by a piece of your heart."
 
@@ -121,6 +119,11 @@ label kitchen:
 
             $ juiceScore += 2
 
+        
+            
+            "Well, it's at least semi-liquid, which is more than you can say about some of your other options. You drop it into the bowl without a second thought and instantaneously repress the memory of the little scream that the slime makes as it hits the juice."
+
+   
     "What next, master chef?"
     
     menu:
@@ -333,7 +336,7 @@ label badJuice:
     
     Finn was able to rest in Loffinlot uninterrupted. Without constantly being in mortal danger, his health improved immensely. There was always a smile on his face and a cup of juice in his hand. Twenty years later, he published the sequel to \"Dark Puckered Hole.\"
     
-    Drey enjoyed life in Loffinlot with his new partners, but both those fateful nights in the Black Sea would haunt his steps forever. 
+    Drey enjoyed life in Loffinlot with his new partners, but both those fateful nights in the Black Sea would haunt his step forever. 
     
     The raging storm and losing Arlin to the tide, and later the tragic accident of his niece and her crew's deaths. He would never know whether Arlin was alive or not, and it kept him up many a night.
     
@@ -494,7 +497,7 @@ label chipPOV:
 
     "You have a different idea, however. You can't see your stalker anywhere around you, as the darkness is cloaking them - but what if they're observing from above? Craning your head back, you narrow your eyes to cut through the black."
 
-    "Before you can get a good look, however, a piercing {i}caw!{/i} echoes across the water. Your eyes snap to a massive abomination that swoops over the ship." 
+    "Before you can get a good look, however, a piercing caw! echoes across the water. Your eyes snap to a massive abomination that swoops over the ship." 
     
     "It has wings of thin bones that drip black ichor onto the deck as it passes over, and a human face with eyes sewn shut and no jaw."
 
@@ -505,4 +508,80 @@ label chipPOV:
     "Adrenaline begins to seep into your system. Empty air isn't supposed to do that."
 
     c "We're in a test tube!"
+
+    jump outside
+
+label outside:
+    show black #change to turrets later
+    play music "1_prophetic_hero.mp3"
+
+    ```The mirage of darkness melts like butter, revealing claustrophobic iron walls that surround the entire ship.
+    
+    Stretching off into the distance before you is your destination, a haunting tower that reaches into the sky. The docks are waiting for you at the foot of the tower, but they're terribly far away.
+
+    You look back at the way you came, and horror jabs into your missing heart. The only apparent exit is through a pair of closing steel doors. The exit is narrowing, but the Albatross could still slip through if you managed to get turned around soon enough.
+
+    Magical whirring catches your splintering attention. You snap your head skywards once more and notice something you didn't before. 
+    
+    Atop the walls of this bay are countless massive silver turrets. Their nozzles are elongating and aiming directly at the Albatross as the same purple energy that killed the flying creature begins to glow inside each one of them.
+
+    This isn't exactly the best situation you've ever been in. Surely, though, you can work your way out of being blasted into oblivion - right?
+
+    Jay clutches her head in her hands, looking around in a panic.
+```
+    j "So, maybe this place isn't as abandoned as I thought."
+
+    g "Jay, you outrank these turrets, right?"
+
+    j "{i}No?!{/i}"
+
+    "Of course Jay would get you into this situation. She told you that the stronghold would be completely abandoned and safe to enter. 
+    
+    Well, it is the Black Sea, so you should have expected some sort of resistance - nothing is ever easy for the Riptide Pirates - but still! She could have set a more realistic expectation!"
+
+    c "Jay, remember when you said that nobody was going to be here!? If we die, my last words are, 'I told you so!'"
+
+    "Jay gives you a scathing glare but doesn't respond. You heave a sigh, knowing that now is not the time to get into an argument."
+
+    c "In or out?"
+
+    "She stares at you with wild eyes for a long second, then glances back and forth between the exit and stronghold. Finally, she gives you a strong nod."
+
+    j "I think we gotta keep going."
+
+    "You hesitate for a moment. Coming to the stronghold like Jay had wanted has already proved more dangerous than expected. What if her judgement is wrong again? Should you protect your crew and give up on the Navy secrets?"
+
+    "If you manage to take them all out - and keep the exit doors open -, you might be able to send some of your crew to safety outside the stronghold walls while you and your fellow captains venture forth."
+
+    "The rest of your crew have flooded onto the main deck, waiting for their captains to give them a command. Captain, what should you do?"
+
+    menu:
+        "Turn back":
+            "The secrets aren't worth the trouble. Whatever secrets the Navy has in there are way too important to be accessible. There could be another Captain Widow waiting inside, ready to take the hearts of your friends."
+
+            "The last thing you want is for your family to turn into undead monsters like you."
+
+            c "TURN THE SHIP AROUND!"
+
+            "Your crew hurry back downstairs to start rowing, but when you move to follow, Jay places herself between you and the door."
+
+            j "What the fuck are you doing!? We need to keep going!"
+
+            c "I can't do that, Jay. Not this time. I'm not risking the crew's lives for whatever you're looking for."
+
+            j "There might be useful information for all of us! This isn't just about me. We might be able to find something that'll help us win the war."
+
+            "As the ship turns around under your feet, Gillion lifts his arms and summons the power of storm. A massive funnel of wind propels the ship towards the bay's exit. Both you and Jay are knocked off your feet by the force of it."
+
+            "Magic blasts fizzle out in the empty seawater you were moments before. The turrets are re-targeting at the Albatross, but you know you'll make it back out to open waters. The wind buffets hair into your eyes as you try your best to ignore Jay's betrayed expression."
+        
+            c "I'm not losing my crew to the Black Sea again."
+
+            play music "4_pirates_legacy.mp3"
+
+            "The exit doors scrape the tail end of the ship as you skim through passageway. As the Albatross slows to a stop, swaying heavily from front to back, Jay hops onto her feet and marches down into the ship, slamming the door behind her."
+
+            "You remain sitting on the deck. The danger and the fear fade to a distant humming in your ears. Your eyes slip close, and you take a deep breath. Not because you need it. You'll never need it again. You breathe because you didn't know how dear life was until you no longer had it."
+
+            "Until Jay's heart is ripped from her body, she will not understand your decision to run away."
 return
