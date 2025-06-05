@@ -17,7 +17,7 @@
 
 ##############################################################################
     # This function makes the continuous text sounds
-    def text_sounds(event, interact=False, **kwargs):
+    def text_sounds_jay(event, interact=False, **kwargs):
         if event == "show": # If textbox is shown
             what = renpy.store._last_say_what # This grabs the text that was most recently spoken on-screen
             if what:
@@ -26,19 +26,43 @@
                 sound_count = 5
             for _ in range(sound_count): # This creates a sound queue based on how many characters are in the dialog block
                 randosound = renpy.random.randint(1, 3) # This generates a random number between 1 and 11 inclusive. Change this based on how many sound files you have
-                renpy.sound.queue(f"audio/blip-{renpy.last_say()}-{randosound}.wav", channel="sound", loop=False) # Change "popcat" to the name of your sound file
+                renpy.sound.queue(f"audio/blip-jay-{randosound}.wav", channel="sound", loop=False) # Change "popcat" to the name of your sound file
+        elif event == "end" or event == "slow_done": # This stops the text sounds if there is a pause in the dialog or the text has finished displaying
+            renpy.sound.stop(channel="sound")
+
+    def text_sounds_chip(event, interact=False, **kwargs):
+        if event == "show": # If textbox is shown
+            what = renpy.store._last_say_what # This grabs the text that was most recently spoken on-screen
+            if what:
+                sound_count = len(what)
+            else:
+                sound_count = 5
+            for _ in range(sound_count): # This creates a sound queue based on how many characters are in the dialog block
+                randosound = renpy.random.randint(1, 3) # This generates a random number between 1 and 11 inclusive. Change this based on how many sound files you have
+                renpy.sound.queue(f"audio/blip-chibo-{randosound}.wav", channel="sound", loop=False) # Change "popcat" to the name of your sound file
+        elif event == "end" or event == "slow_done": # This stops the text sounds if there is a pause in the dialog or the text has finished displaying
+            renpy.sound.stop(channel="sound")
+
+    def text_sounds_gill(event, interact=False, **kwargs):
+        if event == "show": # If textbox is shown
+            what = renpy.store._last_say_what # This grabs the text that was most recently spoken on-screen
+            if what:
+                sound_count = len(what)
+            else:
+                sound_count = 5
+            for _ in range(sound_count): # This creates a sound queue based on how many characters are in the dialog block
+                randosound = renpy.random.randint(1, 3) # This generates a random number between 1 and 11 inclusive. Change this based on how many sound files you have
+                renpy.sound.queue(f"audio/blip-gilly-{randosound}.mp3", channel="sound", loop=False) # Change "popcat" to the name of your sound file
         elif event == "end" or event == "slow_done": # This stops the text sounds if there is a pause in the dialog or the text has finished displaying
             renpy.sound.stop(channel="sound")
 ##############################################################################
 
-define g = Character("Gillion Tidestrider", window_style="windowGill", callback=text_sounds)
-define c = Character("Chip", window_style="windowChip", callback=text_sounds)
-define j = Character("Jay Ferin", window_style="windowJay", callback=text_sounds)
+define g = Character("Gillion Tidestrider", window_style="windowGill", callback=text_sounds_gill)
+define c = Character("Chip", window_style="windowChip", callback=text_sounds_chip)
+define j = Character("Jay Ferin", window_style="windowJay", callback=text_sounds_jay)
 define o = Character("Old Man Earl")
 
 define juiceScore = 0 #keeps track of the juice
-
-
 
 label start:
    
@@ -267,7 +291,11 @@ label deck:
     It's not worth it to press Chip on the issue - not right now, at least. Not when there's already so much to worry about. The last thing you need is to start a fight right when you're about to delve into one of the most dangerous places you'll ever go.
 
     Chip walks away towards the bow of the ship with his head down. You turn and head in the opposite direction. Your conversation with him doesn't sit right in your stomach, but you can't do anything about it now.
-
+    
+    ```
+    play music "5_grand_strategy.mp3"
+    ```
+    
     You march about the ship and gather the rest of the crew. Earl likes to make a big party out of juice. Although this time, it's your juice, not his. You hope the others can't tell from how it tastes. What does Earl even put into his own juice regularly?
 
     Once everyone is assembled on the main deck, Earl kicks open the kitchen door and rushes over to the crew. A large silver platter is balanced on his left hand, a glass for each person teetering dangerously about.
@@ -288,8 +316,6 @@ label deck:
         jump badJuice
     
 label badJuice:
-
-    play music "5_grand_strategy.mp3"
    
     ```
     Queen and Gryffon are leaning against the ship's railing, cups of purplish-black ichor in hand. Now that your crew is actually about to drink your juice, you feel a deep sense of unease settle in you. Maybe juice is not supposed to look like goo.
@@ -382,9 +408,7 @@ label badJuice:
     ```
     return
 
-label okJuice:
-    play music "5_grand_strategy.mp3"  
-    
+label okJuice:    
     ```
     Most of the crew are silent as they drink. Your eyes scan them as paranoia begins brewing in your gut. What if they don't like it? What if they all blame you? What if they all die because you accidentally made poisonous juice?
     
@@ -400,9 +424,7 @@ label okJuice:
 
     jump chipPOV
 
-label goodJuice:
-    play music "5_grand_strategy.mp3" 
-    
+label goodJuice:    
     ```
     Everyone hums in enjoyment as they drink their juice. You feel relief wash over you. For some unknown reason, you have a sense that you just dodged a hefty bullet.
     
@@ -532,7 +554,7 @@ label chipPOV:
 
     "You have a different idea, however. You can't see your stalker anywhere around you, as the darkness is cloaking them - but what if they're observing from above? Craning your head back, you narrow your eyes to cut through the black."
 
-    "Before you can get a good look, however, a piercing caw! echoes across the water. Your eyes snap to a massive abomination that swoops over the ship." 
+    "Before you can get a good look, however, a piercing {i}caw!{/i} echoes across the water. Your eyes snap to a massive abomination that swoops over the ship." 
     
     "It has wings of thin bones that drip black ichor onto the deck as it passes over, and a human face with eyes sewn shut and no jaw."
 
