@@ -2,17 +2,17 @@
 
 ##############################################################################
 # This function is optional. Only include it if you want automatic pauses between punctuation
-    def typography(what):
-        replacements = [
-                ('. ','. {w=.2}'), # Moderate pause after periods
-                ('? ','? {w=.25}'), # Long pause after question marks
-                ('! ','! {w=.25}'), # Long pause after exclamation marks
-                (', ',', {w=.15}'), # Short pause after commas
-        ]
-        for item in replacements:
-            what = what.replace(item[0],item[1])
-        return what
-    config.say_menu_text_filter = typography # This ensures the text block has the same ID value, even after all the replacements are made
+ #   def typography(what):
+ #        replacements = [
+ #               ('. ','. {w=.2}'), # Moderate pause after periods
+ #               ('? ','? {w=.25}'), # Long pause after question marks
+ #               ('! ','! {w=.25}'), # Long pause after exclamation marks
+ #               (', ',', {w=.15}'), # Short pause after commas
+ #       ]
+ #       for item in replacements:
+ #           what = what.replace(item[0],item[1])
+ #       return what
+ #   config.say_menu_text_filter = typography # This ensures the text block has the same ID value, even after all the replacements are made
 ##############################################################################
 
 ##############################################################################
@@ -25,8 +25,7 @@
             else:
                 sound_count = 5
             for _ in range(sound_count): # This creates a sound queue based on how many characters are in the dialog block
-                randosound = renpy.random.randint(1, 3) # This generates a random number between 1 and 11 inclusive. Change this based on how many sound files you have
-                renpy.sound.queue(f"audio/blip-jay-{randosound}.wav", channel="sound", loop=False) # Change "popcat" to the name of your sound file
+                renpy.sound.queue(f"audio/blip-jay-3.wav", channel="sound", loop=False) # Change "popcat" to the name of your sound file
         elif event == "end" or event == "slow_done": # This stops the text sounds if there is a pause in the dialog or the text has finished displaying
             renpy.sound.stop(channel="sound")
 
@@ -38,8 +37,7 @@
             else:
                 sound_count = 5
             for _ in range(sound_count): # This creates a sound queue based on how many characters are in the dialog block
-                randosound = renpy.random.randint(1, 3) # This generates a random number between 1 and 11 inclusive. Change this based on how many sound files you have
-                renpy.sound.queue(f"audio/blip-chibo-{randosound}.wav", channel="sound", loop=False) # Change "popcat" to the name of your sound file
+                renpy.sound.queue(f"audio/blip-chibo-3.wav", channel="sound", loop=False) # Change "popcat" to the name of your sound file
         elif event == "end" or event == "slow_done": # This stops the text sounds if there is a pause in the dialog or the text has finished displaying
             renpy.sound.stop(channel="sound")
 
@@ -51,8 +49,7 @@
             else:
                 sound_count = 5
             for _ in range(sound_count): # This creates a sound queue based on how many characters are in the dialog block
-                randosound = renpy.random.randint(1, 3) # This generates a random number between 1 and 11 inclusive. Change this based on how many sound files you have
-                renpy.sound.queue(f"audio/blip-gilly-{randosound}.mp3", channel="sound", loop=False) # Change "popcat" to the name of your sound file
+                renpy.sound.queue(f"audio/blip-gilly.mp3", channel="sound", loop=False) # Change "popcat" to the name of your sound file
         elif event == "end" or event == "slow_done": # This stops the text sounds if there is a pause in the dialog or the text has finished displaying
             renpy.sound.stop(channel="sound")
 ##############################################################################
@@ -291,11 +288,7 @@ label deck:
     It's not worth it to press Chip on the issue - not right now, at least. Not when there's already so much to worry about. The last thing you need is to start a fight right when you're about to delve into one of the most dangerous places you'll ever go.
 
     Chip walks away towards the bow of the ship with his head down. You turn and head in the opposite direction. Your conversation with him doesn't sit right in your stomach, but you can't do anything about it now.
-    
-    ```
-    play music "5_grand_strategy.mp3"
-    ```
-    
+
     You march about the ship and gather the rest of the crew. Earl likes to make a big party out of juice. Although this time, it's your juice, not his. You hope the others can't tell from how it tastes. What does Earl even put into his own juice regularly?
 
     Once everyone is assembled on the main deck, Earl kicks open the kitchen door and rushes over to the crew. A large silver platter is balanced on his left hand, a glass for each person teetering dangerously about.
@@ -316,6 +309,8 @@ label deck:
         jump badJuice
     
 label badJuice:
+
+    play music "5_grand_strategy.mp3"
    
     ```
     Queen and Gryffon are leaning against the ship's railing, cups of purplish-black ichor in hand. Now that your crew is actually about to drink your juice, you feel a deep sense of unease settle in you. Maybe juice is not supposed to look like goo.
@@ -408,7 +403,9 @@ label badJuice:
     ```
     return
 
-label okJuice:    
+label okJuice:
+    play music "5_grand_strategy.mp3"  
+    
     ```
     Most of the crew are silent as they drink. Your eyes scan them as paranoia begins brewing in your gut. What if they don't like it? What if they all blame you? What if they all die because you accidentally made poisonous juice?
     
@@ -424,7 +421,9 @@ label okJuice:
 
     jump chipPOV
 
-label goodJuice:    
+label goodJuice:
+    play music "5_grand_strategy.mp3" 
+    
     ```
     Everyone hums in enjoyment as they drink their juice. You feel relief wash over you. For some unknown reason, you have a sense that you just dodged a hefty bullet.
     
@@ -554,7 +553,7 @@ label chipPOV:
 
     "You have a different idea, however. You can't see your stalker anywhere around you, as the darkness is cloaking them - but what if they're observing from above? Craning your head back, you narrow your eyes to cut through the black."
 
-    "Before you can get a good look, however, a piercing {i}caw!{/i} echoes across the water. Your eyes snap to a massive abomination that swoops over the ship." 
+    "Before you can get a good look, however, a piercing caw! echoes across the water. Your eyes snap to a massive abomination that swoops over the ship." 
     
     "It has wings of thin bones that drip black ichor onto the deck as it passes over, and a human face with eyes sewn shut and no jaw."
 
@@ -642,6 +641,141 @@ label outside:
 
             "Until Jay's heart is ripped from her body, she will not understand your decision to run away."
 
+            show black 
+
+            #play music "13_power_of_friendship.mp3" 
+
+           ``` You have achieved absolutely nothing. In fact, the only thing that has changed since you began this journey is the relationship between Jay and Chip. You really had it out for them, didn't you?
+
+                The Riptide Pirates have all survived, but at what cost? Jay's and Chip's trust in each other has shattered. When the time comes for the next big decision, what if their stubbornness leads to a fate worse than secrets left undiscovered? What if Gillion is caught in the crossfire, or the crew?
+
+                You are a coward. You would run from danger because you're too afraid to endanger the Riptide Pirates. But what is life without a challenge? What is life when you give up at the first skipped heartbeat?
+
+                You do not deserve an ending. So, I leave you with this: Mana's fate is precarious. The world is at the brink of war, and you will never know if Jay and Chip are able to reconcile their differences. The tale will remain unfinished.
+
+                Are you brave enough to start again?```
+
+                return
+        
+        "Fight the Turrets":
+            "You set your jaw and ignore Jay. No, there's a way you can win this without fleeing one way or the other. Your crew's lives are on the line; you will get them out."
+
+            c "We go, the crew goes back! Jay, get the turrets off our back! Gill, keep the exit open! Crew, get a rowboat ready!"
+
+
+            ```
+            Jay stares at you incredulously as the crew starts preparing a rowboat. You decidedly ignore her and focus on the fiery magic bubbling under your skin. If she won't do anything about the turrets, you'll have to.
+
+            Gillion runs past you to the other end of the Albatross and creates a large ice block between the exit doors. It halts the doors, but cracks begin running through the block. He glances over his shoulder back at you, nervously eyeing his temporary solution.
+            ```
+
+            g "That won't last for long! Who's going in the rowboat, the crew or us?"
+
+            c "Us! So, get in!!"
+
+            ```
+            You release a powerful blast of fire magic at the nearest three turrets. Orange flames lick at the iron, and for a moment, hope burns in your chest. You've got this! Your plans always work out in the end.
+
+            The hope fades with the fire. The turrets remain pristine in the aftermath, and the purple magic in their nozzles glow brighter than before.
+
+            It's in this moment that you realize you were not a being built to last.
             
+            You remember the feeling that surges over your body quite well. Your hands grasp at a pearl that has long since shattered as lightning cracks your skull open. 
+
+            The nightmares are fleeing your head through the new crevice and your mouth as you scream in anguish. After your heart was stolen, you thought you'd never feel this much ever again.
+
+            Purple swamps your vision, and your nerves are buzzing too brightly to sense anything. The hole in your chest grows. It consumes your bones, flesh, and clothes, until you are nothing but a soul and dust, lying on the deck of your ship in a breezeless hellscape.
+
+            In the last moments before you fade from existence, you vaguely catch a glimpse of fluffy brown hair, wide green eyes, and a shining smile in the corner of your eye, like a shadow moving on its own.
+            ```
+            show black 
+
+            #play music "13_power_of_friendship.mp3" 
+
+            ```
+            There is nobody left. The Riptide Pirates - and the Black Rose Pirates along with them - are all dead. It's incredible how you were able to kill so many people so quickly.
+
+            The Albatross was obliterated along with its passengers. There was no remnant of the great heroes of Mana left. The world descended into darkness as war raged the islands and seas of the world. The Navy's iron fist tightened, and rebels died by the thousands.
+
+            While the world burned, a small boy waited for his family to return. He stared off at the Southern Sea's horizon, waiting for the familiar frogtopus figurehead to emerge from the dark waters. Hope burned in his heart for the Riptide Pirates to return to him, to fix the world and save the dying innocents.
+
+            Time passed, and the boy grew. He found himself in a familiar body, but he felt just as sad as the last time he wore it. That would not quell his desperate belief, though. They would return - yes, it had been six years, but that didn't mean anything.
+            
+            Eventually, though, when his mother laid a hand on his shoulder and drew him back inside, he did not look back.
+
+            Will you draw his gaze to look again at the horizon?
+
+            Will you return the shining smile to his face once more?
+            ```
+            return
+        
+        "Keep Going":
+            "There's fear in Jay's expression, but determination still glints like a spark in her golden eye. At the end of the day, you trust her. If she believes you can get through this, you know you will. The crew just has to be quick about it."
+
+            c "Fuck it. Keep going!"
+
+            "Jay looks at you with a relieved smile on her face, and you wish it would quell the uneasiness in your bones. The crew rush to their positions at the oars, Gillion moving behind the mast and raising his hands to the sails."
+
+            g "Everyone row like - just as an example - you're gonna get disintegrated in FOUR SECONDS!"
+
+            "The power of storm bursts from him and the wind blasts into your sails. The bow rears toward the sky, inky water spraying across your face, and the Albatross barrels forward." 
+            
+            "You swear you can feel the purple, glowing magic crawling on your dead skin like a spider, moving with you as the Albatross picks up speed. From behind, you can hear the exit doors click shut. There's no turning back now."
+
+            Gryffon "What are we gonna do when we get there if it's still aiming at us? Do we all get off the ship? Do we stay on the ship?"
+
+            "You look at Jay and see her at the railing, knuckles white as she clutches at it, and she glances between the turrets and the dark water spanning before the ship. You follow her gaze, straining to see the path ahead, but between the distance and the rocking of the ship, you can't get a clear view."
+
+            g "Why would they design it like this, Jay?! What kind of sick fucking Navy shit is this?"
+
+            j "I don't know! I don't know why this is even happening. These are usually manned!"
+
+            g "Maybe we could appeal to their emotions if they're manned. WE'RE SORRY!"
+
+            j "They don't have emotions! No, Gill, they're unmanned."
+
+            "Gillion's face twists in horror as he whips around to look at the turrets. You grip the mast as the Albatross rushes across the sea, toward the docks that slowly manifest from the darkness. The sharp purple glow fades as you sail further and further from the stronghold's entrance, but you remain rigid. Who knows what the range on those turrets are?"
+
+            "The Albatross gradually slows as it approaches the docks, and in less than a minute, it's bumping into them with a crack! The tower looms above you, but your attention is elsewhere; you're waiting for the explosive power of the turrets to hit the ship and kill you alongside your entire crew."
+
+            "Fortunately, though, it never comes."
+            
+            g "Do you think they're gone, Jay?"
+
+            j "I think we're in the clear, yeah."
+
+            "You release your breath in a whistle through your teeth. You made it - all of you did. The turrets stay quiet, and your crew and your co-captains stay alive. You are safe... for now."
+
+            jump inside
+
+label inside:
+    play music "5_grand_strategy.mp3"
+
+    ```
+    The Albatross rocks as it's secured to the dock by your crew. Onshore, the road ahead winds toward a small town that surrounds the main tower in a ring of ruins and ash. 
+
+    The dark shapes of Hollowed lumber through otherwise empty streets; skeletons litter the ground around the creatures, their rib cages pierced by spears pointed skyward. Old armor and swords lie fallen beneath the human remains and the feet of those who have become monstrosities.
+
+    Dread can no longer make your stomach churn, but you feel the wariness deep in your bones nonetheless. The remnants of the town don't look like a battle; they look like a failed escape.
+
+    Following the road further with your eyes, you see it leads to a rusting, open portcullis. Behind it looms a massively steep staircase, and although you cannot see much past the portcullis, you assume the main entrance to the actual stronghold must be at the top.
+
+    With unease, you and your fellow captains order the crew to remain onboard and stay safe inside Finn's library, with Gryffon and Queen searching for alternative ways past the portcullis from the safety of the ship, in case you're unable to raise it from the other side. 
+
+    With the Mirror of Life Trapping broken and Gillion's refusal to take off his bass slippers to instead wear Jay's stealthy magic boots, Gillion decides to hide in the portable hole while you and Jay sneak through the Hollowed-infested town.
+
+    Gryffon approaches to see you off, putting a hand on Jay's shoulder once she finishes casting invisibility on the Albatross.
+    ```
+    Gryffon "Alright, cap. Remember, it's nighttime, so we gotta hurry. But good luck - and none of you die."
+    
+    j "We'll be quick."
+
+    "You think of the heart pulled from your throat, of torn arteries and veins between your lips, of the blood you still find in your teeth. You think of the empty hole in your chest and the black ichor that rests on your tongue."
+
+    c "Not again."
+
+    "With a nod, Gryffon lets Jay go, allowing you to be on your way. You and Jay head down the path, darting around toppled houses to avoid the attention of the Hollowed. The buildings are decayed, some blackened and covered in soot, and others nothing more than ruins."
+
+    
 
 return
