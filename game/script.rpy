@@ -645,17 +645,17 @@ label outside:
 
             #play music "13_power_of_friendship.mp3" 
 
-           ``` You have achieved absolutely nothing. In fact, the only thing that has changed since you began this journey is the relationship between Jay and Chip. You really had it out for them, didn't you?
+            ``` You have achieved absolutely nothing. In fact, the only thing that has changed since you began this journey is the relationship between Jay and Chip. You really had it out for them, didn't you?
 
-                The Riptide Pirates have all survived, but at what cost? Jay's and Chip's trust in each other has shattered. When the time comes for the next big decision, what if their stubbornness leads to a fate worse than secrets left undiscovered? What if Gillion is caught in the crossfire, or the crew?
+            The Riptide Pirates have all survived, but at what cost? Jay's and Chip's trust in each other has shattered. When the time comes for the next big decision, what if their stubbornness leads to a fate worse than secrets left undiscovered? What if Gillion is caught in the crossfire, or the crew?
 
-                You are a coward. You would run from danger because you're too afraid to endanger the Riptide Pirates. But what is life without a challenge? What is life when you give up at the first skipped heartbeat?
+            You are a coward. You would run from danger because you're too afraid to endanger the Riptide Pirates. But what is life without a challenge? What is life when you give up at the first skipped heartbeat?
 
-                You do not deserve an ending. So, I leave you with this: Mana's fate is precarious. The world is at the brink of war, and you will never know if Jay and Chip are able to reconcile their differences. The tale will remain unfinished.
+            You do not deserve an ending. So, I leave you with this: Mana's fate is precarious. The world is at the brink of war, and you will never know if Jay and Chip are able to reconcile their differences. The tale will remain unfinished.
 
-                Are you brave enough to start again?```
+            Are you brave enough to start again?```
 
-                return
+            return
         
         "Fight the Turrets":
             "You set your jaw and ignore Jay. No, there's a way you can win this without fleeing one way or the other. Your crew's lives are on the line; you will get them out."
