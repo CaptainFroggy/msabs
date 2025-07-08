@@ -288,17 +288,8 @@ label deck:
     It's not worth it to press Chip on the issue - not right now, at least. Not when there's already so much to worry about. The last thing you need is to start a fight right when you're about to delve into one of the most dangerous places you'll ever go.
 
     Chip walks away towards the bow of the ship with his head down. You turn and head in the opposite direction. Your conversation with him doesn't sit right in your stomach, but you can't do anything about it now.
-
-    You march about the ship and gather the rest of the crew. Earl likes to make a big party out of juice. Although this time, it's your juice, not his. You hope the others can't tell from how it tastes. What does Earl even put into his own juice regularly?
-
-    Once everyone is assembled on the main deck, Earl kicks open the kitchen door and rushes over to the crew. A large silver platter is balanced on his left hand, a glass for each person teetering dangerously about.
-
     ```
-    o "Go on, drink up! You gonna let your juice go to waste? If you don't finish it, I'll throw the rest in your face!"
 
-    "Without needing to be told twice, the crew sip their juices politely. You watch everyone closely for their reactions."
-    
-    
     #play music "5_grand_strategy.mp3"
 
     if juiceScore == 8: 
@@ -311,6 +302,17 @@ label deck:
 label badJuice:
 
     play music "5_grand_strategy.mp3"
+
+    
+    "You march about the ship and gather the rest of the crew. Earl likes to make a big party out of juice. Although this time, it's your juice, not his. You hope the others can't tell from how it tastes. What does Earl even put into his own juice regularly?
+
+    Once everyone is assembled on the main deck, Earl kicks open the kitchen door and rushes over to the crew. A large silver platter is balanced on his left hand, a glass for each person teetering dangerously about."
+    
+    o "Go on, drink up! You gonna let your juice go to waste? If you don't finish it, I'll throw the rest in your face!"
+
+    "Without needing to be told twice, the crew sip their juices politely. You watch everyone closely for their reactions."
+    
+    
    
     ```
     Queen and Gryffon are leaning against the ship's railing, cups of purplish-black ichor in hand. Now that your crew is actually about to drink your juice, you feel a deep sense of unease settle in you. Maybe juice is not supposed to look like goo.
@@ -406,6 +408,16 @@ label badJuice:
 label okJuice:
     play music "5_grand_strategy.mp3"  
     
+    "You march about the ship and gather the rest of the crew. Earl likes to make a big party out of juice. Although this time, it's your juice, not his. You hope the others can't tell from how it tastes. What does Earl even put into his own juice regularly?
+
+    Once everyone is assembled on the main deck, Earl kicks open the kitchen door and rushes over to the crew. A large silver platter is balanced on his left hand, a glass for each person teetering dangerously about."
+    
+    o "Go on, drink up! You gonna let your juice go to waste? If you don't finish it, I'll throw the rest in your face!"
+
+    "Without needing to be told twice, the crew sip their juices politely. You watch everyone closely for their reactions."
+    
+    
+    
     ```
     Most of the crew are silent as they drink. Your eyes scan them as paranoia begins brewing in your gut. What if they don't like it? What if they all blame you? What if they all die because you accidentally made poisonous juice?
     
@@ -423,6 +435,15 @@ label okJuice:
 
 label goodJuice:
     play music "5_grand_strategy.mp3" 
+    
+    "You march about the ship and gather the rest of the crew. Earl likes to make a big party out of juice. Although this time, it's your juice, not his. You hope the others can't tell from how it tastes. What does Earl even put into his own juice regularly?
+
+    Once everyone is assembled on the main deck, Earl kicks open the kitchen door and rushes over to the crew. A large silver platter is balanced on his left hand, a glass for each person teetering dangerously about."
+    
+    o "Go on, drink up! You gonna let your juice go to waste? If you don't finish it, I'll throw the rest in your face!"
+
+    "Without needing to be told twice, the crew sip their juices politely. You watch everyone closely for their reactions."
+    
     
     ```
     Everyone hums in enjoyment as they drink their juice. You feel relief wash over you. For some unknown reason, you have a sense that you just dodged a hefty bullet.
@@ -450,7 +471,7 @@ label goodJuice:
 
 label afterJuice:
 
-    play "3_rebels_elegy.mp3"
+    play music "3_rebels_elegy.mp3"
     ```
     Everyone begins to disperse, leaving you and your two fellow captains on the main deck. 
     
@@ -554,7 +575,7 @@ label chipPOV:
 
     "You have a different idea, however. You can't see your stalker anywhere around you, as the darkness is cloaking them - but what if they're observing from above? Craning your head back, you narrow your eyes to cut through the black."
 
-    "Before you can get a good look, however, a piercing caw! echoes across the water. Your eyes snap to a massive abomination that swoops over the ship." 
+    "Before you can get a good look, however, a piercing {i}caw!{/i} echoes across the water. Your eyes snap to a massive abomination that swoops over the ship." 
     
     "It has wings of thin bones that drip black ichor onto the deck as it passes over, and a human face with eyes sewn shut and no jaw."
 
@@ -592,9 +613,9 @@ label outside:
 
     j "{i}No?!{/i}"
 
-    "Of course Jay would get you into this situation. She told you that the stronghold would be completely abandoned and safe to enter. 
+    "Of course Jay would get you into this situation. She told you that the stronghold would be completely abandoned and safe to enter. "
     
-    Well, it is the Black Sea, so you should have expected some sort of resistance - nothing is ever easy for the Riptide Pirates - but still! She could have set a more realistic expectation!"
+    "Well, it is the Black Sea, so you should have expected some sort of resistance - nothing is ever easy for the Riptide Pirates - but still! She could have set a more realistic expectation!"
 
     c "Jay, remember when you said that nobody was going to be here!? If we die, my last words are, 'I told you so!'"
 
@@ -725,7 +746,9 @@ label outside:
 
             "Gryffon" "What are we gonna do when we get there if it's still aiming at us? Do we all get off the ship? Do we stay on the ship?"
 
-            "You look at Jay and see her at the railing, knuckles white as she clutches at it, and she glances between the turrets and the dark water spanning before the ship. You follow her gaze, straining to see the path ahead, but between the distance and the rocking of the ship, you can't get a clear view."
+            "You look at Jay and see her at the railing, knuckles white as she clutches at it, and she glances between the turrets and the dark water spanning before the ship."
+            
+            "You follow her gaze, straining to see the path ahead, but between the distance and the rocking of the ship, you can't get a clear view."
 
             g "Why would they design it like this, Jay?! What kind of sick fucking Navy shit is this?"
 
@@ -735,9 +758,13 @@ label outside:
 
             j "They don't have emotions! No, Gill, they're unmanned."
 
-            "Gillion's face twists in horror as he whips around to look at the turrets. You grip the mast as the Albatross rushes across the sea, toward the docks that slowly manifest from the darkness. The sharp purple glow fades as you sail further and further from the stronghold's entrance, but you remain rigid. Who knows what the range on those turrets are?"
+            "Gillion's face twists in horror as he whips around to look at the turrets. You grip the mast as the Albatross rushes across the sea, toward the docks that slowly manifest from the darkness." 
+            
+            "The sharp purple glow fades as you sail further and further from the stronghold's entrance, but you remain rigid. Who knows what the range on those turrets are?"
 
-            "The Albatross gradually slows as it approaches the docks, and in less than a minute, it's bumping into them with a crack! The tower looms above you, but your attention is elsewhere; you're waiting for the explosive power of the turrets to hit the ship and kill you alongside your entire crew."
+            "The Albatross gradually slows as it approaches the docks, and in less than a minute, it's bumping into them with a {i}crack!{/i}" 
+            
+            "The tower looms above you, but your attention is elsewhere; you're waiting for the explosive power of the turrets to hit the ship and kill you alongside your entire crew."
 
             "Fortunately, though, it never comes."
             
