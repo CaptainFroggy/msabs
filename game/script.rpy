@@ -160,6 +160,9 @@ label kitchen:
             j "Earl, where'd you get this?"
             
             o "I told you it was in the fridge, you idiot! Dontcha ever listen to me?"
+
+            "Well, it's at least semi-liquid, which is more than you can say about some of your other options. You drop it into the bowl without a second thought and instantaneously repress the memory of the little scream that the slime makes as it hits the juice."
+
             
         "Coconut":
             "There is something vile and horrible residing in your soul today. Picking up a lone coconut, you cut it open with a knife and begin shaving coconut flakes into the juice. Every flake is accompanied by a piece of your heart."
@@ -175,9 +178,6 @@ label kitchen:
 
             $ juiceScore += 2
 
-        
-            
-            "Well, it's at least semi-liquid, which is more than you can say about some of your other options. You drop it into the bowl without a second thought and instantaneously repress the memory of the little scream that the slime makes as it hits the juice."
 
    
     "What next, master chef?"
@@ -419,7 +419,7 @@ label okJuice:
 
     "When you knock it back, however, you understand why everyone was so hesitant. The taste is slightly off, like someone made an unwise substitution. The aftertaste is tangy and sticks to your tongue. It's not horrible, but it sure leaves a lot to be desired."
 
-    jump chipPOV
+    jump afterJuice
 
 label goodJuice:
     play music "5_grand_strategy.mp3" 
@@ -450,6 +450,7 @@ label goodJuice:
 
 label afterJuice:
 
+    play "3_rebels_elegy.mp3"
     ```
     Everyone begins to disperse, leaving you and your two fellow captains on the main deck. 
     
@@ -568,7 +569,7 @@ label chipPOV:
     jump outside
 
 label outside:
-    show black #change to turrets later
+    scene gun #change to turrets later
     play music "1_prophetic_hero.mp3"
 
     ```The mirage of darkness melts like butter, revealing claustrophobic iron walls that surround the entire ship.
@@ -612,7 +613,7 @@ label outside:
     "The rest of your crew have flooded onto the main deck, waiting for their captains to give them a command. Captain, what should you do?"
 
     menu:
-        "Turn back":
+        "Turn Back":
             "The secrets aren't worth the trouble. Whatever secrets the Navy has in there are way too important to be accessible. There could be another Captain Widow waiting inside, ready to take the hearts of your friends."
 
             "The last thing you want is for your family to turn into undead monsters like you."
@@ -722,7 +723,7 @@ label outside:
             
             "You swear you can feel the purple, glowing magic crawling on your dead skin like a spider, moving with you as the Albatross picks up speed. From behind, you can hear the exit doors click shut. There's no turning back now."
 
-            Gryffon "What are we gonna do when we get there if it's still aiming at us? Do we all get off the ship? Do we stay on the ship?"
+            "Gryffon" "What are we gonna do when we get there if it's still aiming at us? Do we all get off the ship? Do we stay on the ship?"
 
             "You look at Jay and see her at the railing, knuckles white as she clutches at it, and she glances between the turrets and the dark water spanning before the ship. You follow her gaze, straining to see the path ahead, but between the distance and the rocking of the ship, you can't get a clear view."
 
@@ -766,7 +767,7 @@ label inside:
 
     Gryffon approaches to see you off, putting a hand on Jay's shoulder once she finishes casting invisibility on the Albatross.
     ```
-    Gryffon "Alright, cap. Remember, it's nighttime, so we gotta hurry. But good luck - and none of you die."
+    "Gryffon" "Alright, cap. Remember, it's nighttime, so we gotta hurry. But good luck - and none of you die."
     
     j "We'll be quick."
 
